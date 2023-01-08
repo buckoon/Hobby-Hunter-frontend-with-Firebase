@@ -2,7 +2,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    
+      background-image: url("https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg");
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Open Sans', sans-serif;
+      
+    
+    }
+
+
+ 
+
+.feed label {
+  font-size: 18px;
+  color: #333;
+}
+
+.feed input {
+  font-size: 16px;
+  color: #555;
+}
+
+.feed button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.feed button:hover {
+  cursor: pointer;
+  background-color: #2980b9;
+}
+
+    
+  
   
   .feed_inputcontainer {
     width: 50%;

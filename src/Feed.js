@@ -12,6 +12,7 @@ function Feed() {
     const [hobbys,setHobbys]= useState([]);
     const [input,setInput]= useState("");
     const [input2,setInput2]=useState("");
+    const [input3,setInput3]=useState("");
 
     useEffect(()=>{
         db.collection("hobbys").orderBy("timestamp","desc").onSnapshot(snapshot=>(/*this orders the hobbys*/ 
@@ -25,15 +26,19 @@ function Feed() {
     },[])
 
     const sendHobbys = e =>{/*event*/
+    if (e.type === "click") {
     e.preventDefault();/*this makes it so when you click enter after typing something it does not automatically reset*/
     db.collection("hobbys").add({
         name:"Anonyomous",
         description:input,
         instructions:input2,
+        photo:input3,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setInput("");
     setInput2("");
+    setInput3("");
+}
 }; 
 
   return(
@@ -43,7 +48,7 @@ function Feed() {
                 {/*<PostAddIcon/>*/}
             <div className="feed_input">
 
-                <form onSubmit={sendHobbys}>
+                <form onKeyPress={sendHobbys}>
 
                     <label>List your favorite hobby : </label>
                     <input
@@ -55,6 +60,11 @@ function Feed() {
                     type="text"
                     value={input2}onChange={(e) => setInput2(e.target.value)}/>
 
+                    <label>Please add a photo if needed : </label>
+                    <input
+                    type="text"
+                    value={input3}onChange={(e) => setInput3(e.target.value)}/> 
+
                     <button type="submit">Post</button>
 
 
@@ -64,11 +74,12 @@ function Feed() {
             </div>
         </div>
         
-        {hobbys.map(({id, data:{description,instructions }})=>(
+        {hobbys.map(({id, data:{description,instructions,photo }})=>(
             <Hobby
             key={id}
             description={description}
             instructions={instructions}
+            photo={photo}
             />
         ))}
     </div>
