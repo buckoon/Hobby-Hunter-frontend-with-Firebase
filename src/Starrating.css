@@ -3,6 +3,7 @@
     align-items: center;
     padding-left: 20px;
     flex-direction: row;
+    align-items:baseline;
   }
 
   input[type="radio"]{
@@ -12,6 +13,8 @@
 
 .star{
     height: 30px;
+    bottom:0;
+    left:0;
     
    
 }

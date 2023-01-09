@@ -8,25 +8,32 @@ function Hobby({description, instructions, photo}) {
     <div className = "hobby">
       
       
-          <div className = "hobby_description">
-            <p>Hobby:    {description}</p>
+      <div className = "hobby_description">
+            <h2>Hobby:    {description}</h2>
 
-            <p>Instructions and supplies needed:   {instructions}</p>
+      </div>  
+      <div className ="hobby_body">
 
-              <div className="star">
+          <p>Instructions and supplies needed:   {instructions}</p>
 
-              <Starrating/>
-              </div>
-           </div>
-      
-          
-
-     <div className="photo_container">
+          <div className="photo_container">
           
           <img src={photo}
                 alt=""/>
 
-    </div>
+          </div>
+      </div>
+            
+
+      <div className="star">
+
+              <Starrating/>
+      </div>
+           
+      
+          
+
+    
 
         
 

@@ -1,4 +1,4 @@
-/*.hobby {
+.hobby {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -10,8 +10,8 @@
     font-family: 'Montserrat', sans-serif;
 
   }
-*/
 
+/*
 .hobby {
   display: flex;
   flex-direction: row;
@@ -23,7 +23,9 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   font-family: 'Montserrat', sans-serif;
-}
+ 
+
+}*/
 
   
   .hobby:hover {
@@ -78,7 +80,7 @@
   }
 
   .star {
-   padding: 5px;
+  
   }
 
   
