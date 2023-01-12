@@ -26,7 +26,6 @@ function Feed() {
     },[])
 
     const sendHobbys = e =>{/*event*/
-    if (e.type === "click") {
     e.preventDefault();/*this makes it so when you click enter after typing something it does not automatically reset*/
     db.collection("hobbys").add({
         name:"Anonyomous",
@@ -38,7 +37,6 @@ function Feed() {
     setInput("");
     setInput2("");
     setInput3("");
-}
 }; 
 
   return(
@@ -48,7 +46,7 @@ function Feed() {
                 {/*<PostAddIcon/>*/}
             <div className="feed_input">
 
-                <form onKeyPress={sendHobbys}>
+                <form onSubmit={sendHobbys}>
 
                     <label>List your favorite hobby : </label>
                     <input
@@ -74,7 +72,8 @@ function Feed() {
             </div>
         </div>
         
-        {hobbys.map(({id, data:{description,instructions,photo }})=>(
+        {hobbys.map(({id, data:{description,instructions, photo }})=>(
+            
             <Hobby
             key={id}
             description={description}

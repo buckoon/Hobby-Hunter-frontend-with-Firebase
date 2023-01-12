@@ -5,8 +5,9 @@ import "./Starrating.css"
 
 function Starrating() {
     const [rating, setRating] = useState(null);
+    const [hover, setHover] =useState(null);
   return (
-    <div className="starrating">
+    <div>
 
     <h2 className= "starfill">
         {[...Array(5)].map((star, i) =>{        /*i is for an iterator*/
@@ -16,10 +17,15 @@ function Starrating() {
                     <input type="radio" 
                     name="rating" 
                     value={ratingValue}
-                    onClick={()=>setRating(ratingValue)} 
+                    onClick={()=>setRating(ratingValue)}
+                    
+
                     />
-                <FaStar className="star" color={ratingValue < rating ? "#ffc107" : "#e4e5e9" } 
-                size={100}  />
+                <FaStar className="star" color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9" } 
+                size={20} 
+                onMouseEnter  ={()=> setHover(ratingValue)}
+                onMouseLeave  ={()=> setHover(null)}
+                 />
                 </label>
             )
             

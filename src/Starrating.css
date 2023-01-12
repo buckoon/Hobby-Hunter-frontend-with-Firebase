@@ -1,20 +1,42 @@
-.starrating {
+/*.starrating {
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 1px;
     flex-direction: row;
-  }
+    padding-bottom:5px;
+  
+  }*/
 
   input[type="radio"]{
 
     display:none;
   }
 
+  
 .star{
-    height: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 1px;
+    padding-bottom: 5px;
+    padding-left: 1px;
     
-   
 }
+
+.starfill{
+display:flex;
+
+ 
+ 
+}
+.starfill >label{
+  width: 25px;
+
+
+
+}
+
+
 
 
   
