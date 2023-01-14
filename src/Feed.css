@@ -20,6 +20,8 @@
       opacity: 1;
     }
 
+ 
+
 
     .feed form {
       display: flex;
@@ -106,6 +108,7 @@
   
   .feed_input form label {
     margin-top: 20px;
+    font-weight:600;
   }
   
   .feed_input form input {
