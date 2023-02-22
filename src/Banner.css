@@ -1,0 +1,11 @@
+.banner {
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content:space-evenly; /*pushes everything into the middle*/
+    border-bottom: 0.1px solid lightgray;
+    padding-top: 10px;
+    padding-bottom:10px;
+    width:100%;
+    Z-index: 999;
+}
