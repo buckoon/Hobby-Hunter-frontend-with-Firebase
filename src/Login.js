@@ -1,17 +1,42 @@
 import React, { useState } from "react";
 import { auth } from "./firebase";
 import "./Login.css";
+import { useDispatch } from "react-redux";
+import { login } from "./features/userSlice";
 
 function Login() {
   /*use state to track your user names*/
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
 
   const loginToApp = (e) => {
     e.preventDefault();
   };
-  const register = () => {};
+  const register = () => {
+    if (!name) {
+      /*if there is no name*/
+      return alert("Please enter your name!");
+    }
+    auth
+      .createUserWithEmailAndPassword(
+        email,
+        password
+      ) /*creates email and password on the backend*/
+      .then((userAuth) => {
+        userAuth.user.updateProfile({ displayName: name }).then(() => {
+          dispatch(
+            login({
+              email: userAuth.user.email,
+              uid: userAuth.user.uid,
+              displayName: name,
+            })
+          );
+        });
+      })
+      .catch((error) => alert(error));
+  };
   return (
     <div className="loginScreen">
       <form>
