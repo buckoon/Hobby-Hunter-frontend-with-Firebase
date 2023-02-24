@@ -16,7 +16,7 @@ function Banner() {
   return (
     <div className="banner">
       <div className="banner_title">
-        <h1>Welcome to Hobby Hunter!</h1>
+        <h1>Hobby Hunter</h1>
         <img src={logo} alt="Hobby Hunter logo" />
       </div>
 

@@ -79,7 +79,7 @@
 
   .hobby p strong {
     font-weight: 600;
-    color: #3498db;
+    color: rgb(24, 119, 242);
   }
   
   .hobby p em {
@@ -98,6 +98,11 @@
     
    
 
+  }
+
+  .post_info > h2 {
+    font-size: 14px;
+    color: rgb(0, 113, 133);
   }
 
   .star{
