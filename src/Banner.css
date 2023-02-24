@@ -15,20 +15,17 @@
 
 .banner_container {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-left: 1px;
-  margin-right: 5px;
+  align-items: center;
+  justify-content: flex-end;
 }
-
 
 .banner_title {
   display: flex;
   align-items: center;
   background-color: white;
-  padding: 0 10px;
+  padding: 0 20px;
   border-radius: 20px;
-  margin-left: 0; /* update this */
+  padding-left: 5px;
 }
 
 .banner_title > h1 {
@@ -50,13 +47,11 @@
 }
 
 .banner_right {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .banner_right > button {
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #00b14a;
   color: white;
   border: none;
@@ -65,9 +60,6 @@
   margin-left: auto;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-  margin-right: 30px;
-  margin-top: 20px;
-  height: 45px;
 }
 
 .banner_right > button:hover {
@@ -76,15 +68,12 @@
 
 .header_search {
   padding: 10px;
-  margin-left: 50%;
-  margin-top: 20px;
   display: flex;
   align-items: center;
   border-radius: 5px;
   height: 22px;
   color: gray;
   background-color: #eef3f8;
-  height: 22px;
 }
 
 .header_search > input {
@@ -97,4 +86,3 @@
   transform: scale(1.08);
   opacity: 1;
 }
-
