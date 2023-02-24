@@ -5,6 +5,7 @@ import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
 import logo from "./images/logo.png";
+import SearchIcon from "@mui/icons-material/Search";
 
 function Banner() {
   const user = useSelector(selectUser);
@@ -15,16 +16,23 @@ function Banner() {
   };
   return (
     <div className="banner">
-      <div className="banner_title">
-        <h1>Hobby Hunter</h1>
-        <img src={logo} alt="Hobby Hunter logo" />
-      </div>
-
-      {user ? (
-        <div className="banner_right">
-          <button onClick={logoutOfApp}>Logout</button>
+      <div class="banner_container">
+        <div className="banner_title">
+          <h1>Hobby Hunter</h1>
+          <img src={logo} alt="Hobby Hunter logo" />
         </div>
-      ) : null}
+        <div className="header_search">
+          <SearchIcon />
+
+          <input placeholder="Search" type="text" />
+        </div>
+
+        {user ? (
+          <div className="banner_right">
+            <button onClick={logoutOfApp}>Logout</button>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }
