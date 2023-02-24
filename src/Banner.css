@@ -59,3 +59,8 @@
 .banner_right > button:hover {
   background-color: #d32f2f;
 }
+
+.banner_title:hover {
+  transform: scale(1.08);
+    opacity: 1;
+}
