@@ -74,6 +74,7 @@
   .hobby p {
     font-size: 18px;
     color: #333;
+    font-family: 'Ariel', 
   }
 
   .hobby p strong {
@@ -82,7 +83,7 @@
   }
   
   .hobby p em {
-    font-style: italic;
+    font-style: 'Ariel';
   }
   
   .hobby p u {

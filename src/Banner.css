@@ -1,11 +1,54 @@
 .banner {
     position: sticky;
-    top:0;
+    top: 0;
     display: flex;
-    justify-content:space-evenly; /*pushes everything into the middle*/
-    border-bottom: 0.1px solid lightgray;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1px solid transparent;
     padding-top: 10px;
-    padding-bottom:10px;
-    width:100%;
-    Z-index: 999;
-}
+    padding-bottom: 10px;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .banner_title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner_title > h1 {
+    display: flex;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-right: 20px;
+    padding-left: 60px;
+  }
+  
+  .banner_title > img {
+    margin-right: 10px;
+    width: 15em;
+    height: 5em;
+    border-radius: 20px;
+   
+  }
+  
+  
+  .banner_right {
+    margin-right: 20px;
+  }
+  
+  .banner_right > button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .banner_right > button:hover {
+    background-color: #d32f2f;
+  }
+  
