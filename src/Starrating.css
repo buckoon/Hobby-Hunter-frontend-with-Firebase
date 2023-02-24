@@ -14,12 +14,7 @@
 
   
 .star{
-    height: 25px;
-    display: flex;
-    flex-direction: row;
-    margin: 0 1px;
-    padding-bottom: 5px;
-    padding-left: 1px;
+    height: 30px;
     
 }
 
