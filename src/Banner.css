@@ -1,23 +1,16 @@
 .banner {
   position: sticky;
   top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 0.1px solid transparent;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  width: 100%;
-  z-index: 999;
+  z-index: 100;
 }
 
 .banner_container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-right: auto;
 }
+
 
 .banner_title {
   display: flex;
@@ -26,6 +19,7 @@
   padding: 0 20px;
   border-radius: 20px;
   padding-left: 5px;
+  margin-left: 20px;
 }
 
 .banner_title > h1 {
@@ -56,10 +50,12 @@
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   margin-left: auto;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  font-family: Arial;
+  font-weight: bold;
 }
 
 .banner_right > button:hover {
@@ -68,18 +64,26 @@
 
 .header_search {
   padding: 10px;
+  
   display: flex;
   align-items: center;
-  border-radius: 5px;
-  height: 22px;
+  border-radius: 24px;
+  height: 30px;
   color: gray;
-  background-color: #eef3f8;
+  background-color:#eef3f8;
+  margin-left: 50%;
 }
 
 .header_search > input {
+  font-size: 18px;
   outline: none;
   border: none;
   background: none;
+}
+
+.header_search:hover {
+  transform: scale(1.08);
+  opacity: 1;
 }
 
 .banner_title:hover {

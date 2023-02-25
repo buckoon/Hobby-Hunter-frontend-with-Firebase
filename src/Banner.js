@@ -24,7 +24,7 @@ function Banner() {
         <div className="header_search">
           <SearchIcon />
 
-          <input placeholder="Search" type="text" />
+          <input placeholder="" type="text" />
         </div>
 
         {user ? (
