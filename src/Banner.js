@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
 import logo from "./images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
+import { Avatar } from "@mui/material";
 
 function Banner() {
   const user = useSelector(selectUser);
@@ -21,14 +22,15 @@ function Banner() {
           <h1>Hobby Hunter</h1>
           <img src={logo} alt="Hobby Hunter logo" />
         </div>
-        <div className="header_search">
-          <SearchIcon />
-
-          <input placeholder="" type="text" />
-        </div>
-
+        {user && (
+          <div className="header_search">
+            <SearchIcon />
+            <input placeholder="" type="text" />
+          </div>
+        )}
         {user ? (
           <div className="banner_right">
+            <Avatar src={user.photoUrl}></Avatar>
             <button onClick={logoutOfApp}>Logout</button>
           </div>
         ) : null}

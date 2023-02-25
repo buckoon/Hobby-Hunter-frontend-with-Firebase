@@ -7,7 +7,7 @@ function Hobby({ name, profpic, description, instructions, photo }) {
   return (
     <div className="hobby">
       <div className="hobby_description">
-        {profpic ? <Avatar className={profpic}></Avatar> : <Avatar />}
+        <Avatar src={profpic}></Avatar>
         <div className="post_info">
           <h2>{name}</h2>
         </div>
