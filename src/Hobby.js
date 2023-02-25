@@ -9,10 +9,11 @@ function Hobby({ name, profpic, description, instructions, photo }) {
       <div className="hobby_description">
         <Avatar src={profpic}></Avatar>
         <div className="post_info">
-          <h2>{name}</h2>
+          <h2 className="user">{name}</h2>
         </div>
-        <p>Hobby: {description}</p>
-        <p>Instructions and supplies needed: {instructions}</p>
+        <h3 className="hobby_title">{description}</h3>
+        <p className="p-instructions">{instructions}</p>
+
         <div className="star">
           <Starrating />
         </div>

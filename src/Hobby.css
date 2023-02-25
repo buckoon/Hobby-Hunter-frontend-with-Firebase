@@ -29,10 +29,10 @@
   display: flex;
   padding:15px;
   margin-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid lightgray;
   width: 900px;
-  background-color: #f4f4f4;
+  background-color:  #f0f2f5;
   flex-direction: row;
   
 
@@ -48,9 +48,26 @@
     margin-bottom:10px;
     flex-direction: column;
     justify-content:space-between;
+    
+    
   }
   
+  .hobby_title {
+  font-style: italic;
+  color: #00b14a;
+ }
+  
+ 
+  .hobby_description > .MuiAvatar-root{
+    width: 60px;
+    height: 60px;
 
+  }
+
+  .hobby_description > .MuiAvatar-root:hover {
+    transform: scale(3);
+      opacity: 1;
+  }
 .hobby_type{
   margin-left:10px;
 }
@@ -102,12 +119,19 @@
 
   .post_info > h2 {
     font-size: 14px;
-    color: rgb(0, 113, 133);
+    
+  color: #00b14a;
   }
 
   .star{
     margin-left: 10px;
     margin-bottom: 10px;
+  }
+
+  .hobby_description > p {
+    color:rgb(0, 113, 133);;
+    font-style: italic;
+    
   }
 
   

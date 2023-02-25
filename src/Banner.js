@@ -22,14 +22,13 @@ function Banner() {
           <h1>Hobby Hunter</h1>
           <img src={logo} alt="Hobby Hunter logo" />
         </div>
-        {user && (
-          <div className="header_search">
-            <SearchIcon />
-            <input placeholder="" type="text" />
-          </div>
-        )}
         {user ? (
           <div className="banner_right">
+            <div className="header_search">
+              <SearchIcon />
+              <input placeholder="" type="text" />
+            </div>
+            <h2 className="user">Welcome {user.displayName}!</h2>
             <Avatar src={user.photoUrl}></Avatar>
             <button onClick={logoutOfApp}>Logout</button>
           </div>

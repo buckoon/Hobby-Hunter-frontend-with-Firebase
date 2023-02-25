@@ -30,7 +30,7 @@
 
 .feed label {
   font-size: 18px;
-  color: #333;
+  color: #00b14a;
 }
 
 .feed_input {
@@ -97,7 +97,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+  
   }
+
+  .feed_input > form > label:hover {
+    background: rgba(232, 234, 238, 0.9);
+    border-radius: 20px;
+  }
+
   
   .feed_input form {
     display: flex;
@@ -109,15 +116,19 @@
   .feed_input form label {
     margin-top: 20px;
     font-weight:600;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 25px;
   }
   
   .feed_input form input {
     width: 100%;
     height: 40px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 0 10px;
     font-size: 16px;
+    background-color:  #f0f2f5;
     
   }
   

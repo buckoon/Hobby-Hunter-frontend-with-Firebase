@@ -58,9 +58,7 @@ function Feed() {
             />
             {/*onchange is an event that is set equal to an anonomous  function which then invokes setHobby so then we are going to change the hobby when the input value is changed*/}
 
-            <label>
-              List the instructions for this hobby and what is needed :{" "}
-            </label>
+            <label>Instructions and supplies: </label>
             <input
               type="text"
               value={input2}

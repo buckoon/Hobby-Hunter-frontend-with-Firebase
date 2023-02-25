@@ -2,6 +2,12 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+  height: 85px;
+  flex-wrap: wrap; /* add flex-wrap property to wrap elements onto multiple lines */
 }
 
 .banner_container {
@@ -9,8 +15,14 @@
   align-items: center;
   justify-content: space-between;
   margin-right: auto;
+  height: 85px;
+  width:100%;
+  flex-wrap: wrap; /* add flex-wrap property to wrap elements onto multiple lines */
 }
 
+.user {
+  margin-right: 8px;
+}
 
 .banner_title {
   display: flex;
@@ -20,6 +32,8 @@
   border-radius: 20px;
   padding-left: 5px;
   margin-left: 40px;
+  height: 85px;
+  flex-shrink: 0; /* add flex-shrink property to prevent logo from shrinking */
 }
 
 .banner_title > h1 {
@@ -31,6 +45,7 @@
   margin-top: 20px;
   margin-right: 10px;
   padding-left: 10px;
+  flex-shrink: 0; /* add flex-shrink property to prevent title from shrinking */
 }
 
 .banner_title > img {
@@ -41,7 +56,33 @@
 }
 
 .banner_right {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
+  padding:0 10px;
+  padding-left: 5px;
+  flex-shrink: 0;
+  
+  
+  
+
+}
+
+.banner_right > h2{
+  color: #00b14a;
+  font-style: italic;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.banner_right .MuiAvatar-root {
+  margin-right: 15px; /* add margin to the right of the Avatar */
+  
+}
+
+.banner_right> .MuiAvatar-root:hover {
+  transform: scale(2);
+    opacity: 1;
 }
 
 .banner_right > button {
@@ -56,6 +97,8 @@
   transition: background-color 0.3s ease-in-out;
   font-family: Arial;
   font-weight: bold;
+  height: 45px;
+  width: 100px;
 }
 
 .banner_right > button:hover {
@@ -64,14 +107,14 @@
 
 .header_search {
   padding: 10px;
-  
+  margin-right: 10px;
   display: flex;
   align-items: center;
   border-radius: 24px;
   height: 30px;
   color: gray;
   background-color:#eef3f8;
-  margin-left: 50%;
+  
 }
 
 .header_search > input {
