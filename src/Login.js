@@ -3,6 +3,7 @@ import { auth } from "./firebase";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
+import hpic from "./images/hpic.png";
 
 function Login() {
   /*use state to track your user names*/
@@ -94,6 +95,7 @@ function Login() {
           </span>
         </p>
       </form>
+      <img src={hpic} alt="login pic" />
     </div>
   );
 }

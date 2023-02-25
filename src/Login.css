@@ -1,6 +1,6 @@
 .loginScreen{
     display:grid;
-    place-items: left;
+    grid-template-columns: 1fr 1fr; /* Two columns */
     margin-left: auto;
     margin-right: auto;
     padding-top: 100px;
@@ -30,8 +30,14 @@
     color:#fff;
     background-color:#00b14a;
     border-radius:5px;
-    cursor: pointer;
 
+}
+
+.loginScreen > img {
+    display:flex;
+   width: 934px;
+   height: 474px;
+   margin-right: 100px;
 }
 
 .login_register{
