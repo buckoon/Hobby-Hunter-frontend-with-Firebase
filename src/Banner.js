@@ -10,11 +10,13 @@ import { Avatar } from "@mui/material";
 
 function Banner() {
   const user = useSelector(selectUser);
+  console.log(user);
   const dispatch = useDispatch();
   const logoutOfApp = () => {
     dispatch(logout());
     auth.signOut();
   };
+  console.log("User photoUrl:", user ? user.photoUrl : null);
   return (
     <div className="banner">
       <div class="banner_container">
