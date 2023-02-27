@@ -41,7 +41,8 @@ function Login() {
         password
       ) /*creates email and password on the backend*/
       .then((userAuth) => {
-        userAuth.user.updateProfile({ displayName: name }).then(() => {
+        userAuth.user.updateProfile({ displayName: name,
+          photoUrl: profpic,}).then(() => {
           dispatch(
             login({
               email: userAuth.user.email,
