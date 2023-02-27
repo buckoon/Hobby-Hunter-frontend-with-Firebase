@@ -16,7 +16,8 @@ function Banner() {
     dispatch(logout());
     auth.signOut();
   };
-  console.log("User photoUrl:", user ? user.photoUrl : null);
+
+  console.log({ photoUrl: user?.photoUrl });
   return (
     <div className="banner">
       <div class="banner_container">
