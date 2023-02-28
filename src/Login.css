@@ -23,6 +23,8 @@
     
 }
 
+
+
 .loginScreen > form > button{
     width:365px;
     height:50px;
@@ -35,15 +37,36 @@
 
 .loginScreen > img {
     display:flex;
-   width: 934px;
-   height: 474px;
-   margin-right: 100px;
+   width: 700px;
+   height: 355px;
+   margin-right: 160px;
+   border-radius:10px;
+   margin-top: 50px;
+   
 }
 
+.loginScreen > img:hover{
+
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+.membership{
+    background: rgba(232, 234, 238, 0.9);
+    border-radius: 5px;
+    width: 365px;
+}
 .login_register{
  color:#0074b7;
  cursor:pointer;
+
+ 
 }
+
+
+
+
+
 
 .loginScreen > p {
     margin-top: 20px;

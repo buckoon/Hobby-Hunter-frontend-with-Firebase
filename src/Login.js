@@ -3,7 +3,7 @@ import { auth } from "./firebase";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
-import hpic from "./images/hpic.png";
+import hpic from "./images/cover.png";
 
 function Login() {
   /*use state to track your user names*/
@@ -24,7 +24,7 @@ function Login() {
             email: userAuth.user.email,
             uid: userAuth.user.uid,
             displayName: userAuth.user.displayName,
-            profileUrl: userAuth.user.photoURL,
+            photoUrl: userAuth.user.photoURL,
           })
         );
       })
@@ -89,7 +89,7 @@ function Login() {
           Sign In
         </button>
 
-        <p>
+        <p className="membership">
           Not a member?
           <span className="login_register" onClick={register}>
             Register Now
