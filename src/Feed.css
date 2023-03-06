@@ -30,7 +30,11 @@
 
 .feed label {
   font-size: 18px;
+  font-style: italic;
   color: #00b14a;
+
+
+
 }
 
 .feed_input {
@@ -41,6 +45,7 @@
 
   color: #555;
 }
+
 
 .feed_input > form {
 
@@ -116,9 +121,11 @@
   .feed_input form label {
     margin-top: 20px;
     font-weight:600;
-    font-family: cursive;
+    
     font-style: italic;
     font-size: 25px;
+    
+   color: #00b14a;
   }
   
   .feed_input form input {
