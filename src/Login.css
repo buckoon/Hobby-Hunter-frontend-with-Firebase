@@ -23,6 +23,11 @@
     
 }
 
+.loginScreen > form > input:hover{
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
 
 
 .loginScreen > form > button{
@@ -34,6 +39,11 @@
     border-radius:5px;
 
 }
+
+.loginScreen > form > button:hover{
+    transform: scale(1.08);
+    opacity: 1;
+  }
 
 .loginScreen > img {
     display:flex;
