@@ -5,6 +5,7 @@ import { db } from "./firebase";
 import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
+import {BiMessageRoundedAdd} from "react-icons/bi";
 
 /*import PostAddIcon from '@mui/icons-material/PostAdd';*/
 
@@ -14,6 +15,11 @@ function Feed() {
   const [input, setInput] = useState("");
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
+  const [displayinput, setDisplayinput]= useState(false);
+  const handleDisplayinput =()=>{
+    setDisplayinput(!displayinput);
+  }
+
 
   useEffect(() => {
     db.collection("hobbys")
@@ -42,40 +48,72 @@ function Feed() {
     setInput("");
     setInput2("");
     setInput3("");
+    setDisplayinput(!displayinput);
   };
 
   return (
-    <div className="feed">
-      <div className="feed_inputcontainer">
-        {/*<PostAddIcon/>*/}
-        <div className="feed_input">
-          <form onSubmit={sendHobbys}>
-            <label>List your favorite hobby : </label>
+    <div className="min-h-screen bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r from-blue-100 to-green-100 flex flex-col items-center">
+      <button onClick={handleDisplayinput} className=" flex px-4 py-2 bg-green-600 text-white rounded-lg font-medium z-20 cursor-pointer" >
+      Add a Hobby <BiMessageRoundedAdd className="ml-2" size={25} /> 
+      </button>
+      
+      <div className={displayinput ? " ease-in duration-300 w-full max-w-md mt-8 bg-white bg-opacity-80 rounded-md p-8":"absolute left-[100%] ease-in duration-500 z-10"}>
+        <form onSubmit={sendHobbys}>
+          <div className="mb-6">
+            <label
+              htmlFor="hobby"
+              className="block text-green-600 font-bold mb-2"
+            >
+              List your favorite hobby :
+            </label>
             <input
               type="text"
+              id="hobby"
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
             />
-            {/*onchange is an event that is set equal to an anonomous  function which then invokes setHobby so then we are going to change the hobby when the input value is changed*/}
-
-            <label>Instructions and supplies: </label>
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="instructions"
+              className="block text-green-600 font-bold mb-2"
+            >
+              Instructions and supplies:
+            </label>
             <input
               type="text"
+              id="instructions"
               value={input2}
               onChange={(e) => setInput2(e.target.value)}
+              className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
             />
-
-            <label>Please add a photo if needed : </label>
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="photo"
+              className="block text-green-600 font-bold mb-2"
+            >
+              Add a photo:
+            </label>
             <input
               type="text"
+              id="photo"
               value={input3}
               onChange={(e) => setInput3(e.target.value)}
+              className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
             />
-
-            <button type="submit">Post</button>
-          </form>
-        </div>
+          </div>
+          <button
+            type="submit"
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Submit
+          </button>
+        </form>
+        
       </div>
+
 
       {hobbys.map(
         ({ id, data: { name, profpic, description, instructions, photo } }) => (

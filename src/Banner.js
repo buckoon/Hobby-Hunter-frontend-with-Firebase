@@ -10,33 +10,46 @@ import { Avatar } from "@mui/material";
 
 function Banner() {
   const user = useSelector(selectUser);
-  console.log(user);
   const dispatch = useDispatch();
   const logoutOfApp = () => {
     dispatch(logout());
     auth.signOut();
   };
 
-  console.log({ photoUrl: user?.photoUrl });
   return (
-    <div className="banner">
-      <div className="banner_container">
-        <div className="banner_title">
-          <h1>Hobby Hunter</h1>
-          <img src={logo} alt="Hobby Hunter logo" />
+    <div className="sticky top-0 z-50 flex items-center justify-between mx-auto h-14 lg:h-20 w-full max-w-screen-2xl">
+      <div className="flex items-center justify-between mx-auto h-full lg:px-4 space-x-20">
+        <div className="flex-shrink-0">
+          <div className="flex items-center bg-white rounded-lg px-3 py-2">
+            <h1 className="italic text-green-600 text-2xl sm:text-3xl lg:text-4xl font-medium">Hobby Hunter</h1>
+            <img src={logo} alt="Hobby Hunter logo" className="w-40 h-12 lg:w-52 lg:h-16 ml-2 rounded-lg" />
+          </div>
         </div>
         {user ? (
-          <div className="banner_right">
-            <div className="header_search">
-              <SearchIcon />
-              <input placeholder="" type="text" />
+          <div className="flex items-center ml-3">
+            <div className="relative flex items-center">
+              <SearchIcon className="absolute left-3 text-gray-500" />
+              <input
+                type="text"
+                placeholder="Search"
+                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-150 ease-in-out"
+              />
             </div>
-            <h2 className="user">Welcome {user.displayName}!</h2>
-            <Avatar src={user.photoUrl}></Avatar>
-            <button onClick={logoutOfApp}>Logout</button>
+            <h2 className="italic text-green-600 text-xl sm:text-2xl lg:text-3xl font-medium mr-3">
+              Welcome {user.displayName}!
+            </h2>
+            <Avatar src={user.photoUrl} className="mr-3 lg:mr-5 w-8 h-8 lg:w-10 lg:h-10" />
+            <button
+              className="px-4 py-2 text-white bg-green-600 rounded-lg font-medium hover:bg-red-600 transition duration-150 ease-in-out"
+              onClick={logoutOfApp}
+            >
+              Logout
+            </button>
           </div>
         ) : (
-          <h1 className="intro">Find a new hobby today!</h1>
+          <h1 className="italic text-green-600 text-2xl sm:text-3xl  lg:text-4xl font-medium mr-32 lg:mr-64 hidden md:block">
+            Find a new hobby today!
+          </h1>
         )}
       </div>
     </div>
