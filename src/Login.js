@@ -60,35 +60,35 @@ function Login() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto py-20 px-6 md:px-32 items-center">
       <form className="flex flex-col items-center w-full">
         <input
-          className="w-[80%]  h-12 px-3 rounded mb-3"
+          className="w-[60%]  h-12 px-3 rounded mb-3"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Full name (required if registering)"
         />
         <input
-          className="w-[80%] h-12 px-3 rounded mb-3"
+          className="w-[60%] h-12 px-3 rounded mb-3"
           type="text"
           value={profpic}
           onChange={(e) => setProfpic(e.target.value)}
-          placeholder="Profile Pic (optional)"
+          placeholder="Optional Profile Pic (Paste URL Here)"
         />
         <input
-          className="w-[80%]  h-12 px-3 rounded mb-3"
+          className="w-[60%]  h-12 px-3 rounded mb-3"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
         <input
-          className="w-[80%]  h-12 px-3 rounded mb-3"
+          className="w-[60%]  h-12 px-3 rounded mb-3"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
         <button
-          className="w-[80%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-600 transition-all duration-200"
+          className="w-[60%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-600 transition-all duration-200"
           type="submit"
           onClick={loginToApp}
         >
@@ -97,7 +97,7 @@ function Login() {
         <p className="bg-gray-200 rounded p-2 text-center">
           Not a member?
           <span
-            className="text-blue-500 font-bold cursor-pointer"
+            className="text-blue-500 pl-2 font-bold cursor-pointer"
             onClick={register}
           >
             Register Now
