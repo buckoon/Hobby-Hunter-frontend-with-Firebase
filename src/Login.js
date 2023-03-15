@@ -57,7 +57,7 @@ function Login() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto py-20 px-6 md:px-32 items-center">
+    <div className="grid grid-cols-1  bg-[#f0f2f5] md:grid-cols-2 gap-8 mx-auto py-20 px-6 md:px-32 items-center">
       <form className="flex flex-col items-center w-full">
         <input
           className="w-[60%]  h-12 px-3 rounded mb-3"
@@ -88,13 +88,13 @@ function Login() {
           placeholder="Password"
         />
         <button
-          className="w-[60%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-600 transition-all duration-200"
+          className="w-[60%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-500 transition-all duration-200"
           type="submit"
           onClick={loginToApp}
         >
           Sign In
         </button>
-        <p className="bg-gray-200 rounded p-2 text-center">
+        <p className="bg-gray-200 rounded p-2 text-center transition-all duration-200">
           Not a member?
           <span
             className="text-blue-500 pl-2 font-bold cursor-pointer"

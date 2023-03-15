@@ -8,6 +8,7 @@ import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
 import "./App.css";
 import Banner from "./Banner";
+import Hero from "./Hero";
 
 function App() {
   const user = useSelector(selectUser);
@@ -34,12 +35,18 @@ function App() {
 
   return (
     <div className="app">
-      <Banner />
+      
+      
 
       {!user ? (
+        <>
+        <Hero/>
         <Login />
+        </>
+         
       ) : (
         <div className="app_body">
+          <Banner />
           <Feed />
         </div>
       )}

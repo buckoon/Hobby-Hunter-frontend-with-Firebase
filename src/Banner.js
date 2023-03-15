@@ -21,7 +21,7 @@ function Banner() {
       <div className="flex items-center justify-between mx-auto h-full lg:px-4 space-x-20">
         <div className="flex-shrink-0">
           <div className="flex items-center bg-white rounded-lg px-3 py-2">
-            <h1 className="italic text-green-600 text-2xl sm:text-3xl lg:text-4xl font-medium">Hobby Hunter</h1>
+            <h1 className="text-green-600 text-2xl sm:text-3xl lg:text-4xl font-medium">Hobby Hunter</h1>
             <img src={logo} alt="Hobby Hunter logo" className="w-40 h-12 lg:w-52 lg:h-16 ml-2 rounded-lg" />
           </div>
         </div>
@@ -35,7 +35,7 @@ function Banner() {
                 className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent transition duration-150 ease-in-out"
               />
             </div>
-            <h2 className="italic text-green-600 text-xl sm:text-2xl lg:text-3xl font-medium mr-3">
+            <h2 className="text-green-600 text-xl sm:text-2xl pl-2 lg:text-3xl font-medium mr-3">
               Welcome {user.displayName}!
             </h2>
             <Avatar src={user.photoUrl} className="mr-3 lg:mr-5 w-8 h-8 lg:w-10 lg:h-10" />
@@ -47,7 +47,7 @@ function Banner() {
             </button>
           </div>
         ) : (
-          <h1 className="italic text-green-600 text-2xl sm:text-3xl  lg:text-4xl font-medium mr-32 lg:mr-64 hidden md:block">
+          <h1 className=" text-green-600 text-2xl sm:text-3xl  lg:text-4xl font-medium mr-32 lg:mr-64 hidden md:block">
             Find a new hobby today!
           </h1>
         )}

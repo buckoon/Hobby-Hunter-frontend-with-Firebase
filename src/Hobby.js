@@ -10,9 +10,9 @@ function Hobby({ name, profpic, description, instructions, photo }) {
         <div className="post_info">
           <h2 className="text-green-600 text-sm">{name}</h2>
         </div>
-        <h3 className="italic text-green-500 text-lg">{description}</h3>
+        <h3 className="text-green-500 text-lg">{description}</h3>
         <p className="text-base text-gray-700 max-w-sm break-words">{instructions}</p>
-        <div className="ml-10">
+        <div className="ml-0">
           <Starrating />
         </div>
       </div>
