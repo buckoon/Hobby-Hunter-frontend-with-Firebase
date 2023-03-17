@@ -53,7 +53,7 @@ function Feed() {
   };
 
   return (
-    <div className="min-h-screen  flex-[0.6] flex-col items-center ">
+    <div className="min-h-screen  flex-[0.6] flex-col items-center space-y-4">
 
       <div className="flex items-center justify-center">
         <button onClick={handleDisplayinput} className=" flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer  " >

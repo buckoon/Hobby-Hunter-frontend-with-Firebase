@@ -28,26 +28,30 @@ function Weather() {
   };
 
   return (
-    <div className="flex-[0.2] h-fit flex-col items-center bg-opacity-40 bg-white  top-[80px] rounded-lg  text-green-600 text-center border-b border-gray-600">
+    <div className="flex-[0.2] h-fit sticky flex-col items-center bg-opacity-40 bg-white  top-[80px] rounded-lg  text-green-600 text-center border-b border-gray-600">
       <h3 className=" font-bold my-6 text-green-600">
         Check the weather in case you find an outdoor hobby
       </h3>
-      <form onSubmit={handleFormSubmit} className="flex items-center">
-        <input
-          id="location"
-          type="text"
-          value={location}
-          onChange={handleInputChange}
-          placeholder="Enter City"
-          className="border border-gray-400 rounded px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-        />
-        <button
-          type="submit"
-          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
-        >
+      <div>
+       <form onSubmit={handleFormSubmit} className="flex flex-col items-center space-y-2">
+          <input
+            id="location"
+           type="text"
+           value={location}
+           onChange={handleInputChange}
+           placeholder="Enter City"
+           className="border border-gray-400 rounded px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+         />
+          <button
+            type="submit"
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+         >
           Search
-        </button>
-      </form>
+         </button>
+       </form>
+
+      </div>
+      
 
       {error && (
         <div className="text-red-500 mt-6">
@@ -56,7 +60,7 @@ function Weather() {
       )}
 
       {weatherData && (
-        <div className="mt-6 p-6 border border-gray-400 rounded">
+        <div className="mt-6 p-6 border-b border-gray-400 rounded">
           <h2 className="text-2xl font-bold">{weatherData.name}</h2>
           <p className="text-xl">
             Temperature: {weatherData.main.temp} &#8457;

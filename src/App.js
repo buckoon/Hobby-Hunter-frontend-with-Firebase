@@ -49,7 +49,7 @@ function App() {
       ) : (
         <div className="space-y-4">
           <Banner />
-          <div className="flex w-90 mt-[35px] justify-center space-x-4 " >
+          <div className="flex w-90 justify-center space-x-4 " >
             
             <Toprated/>
             <Feed />
