@@ -53,10 +53,14 @@ function Feed() {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r from-blue-100 to-green-100 flex flex-col items-center">
-      <button onClick={handleDisplayinput} className=" flex px-16 py-3  bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer mt-4 mb-4" >
-      Add a Hobby <AddIcon className="ml-2" size={25} /> 
-      </button>
+    <div className="min-h-screen  flex-[0.6] flex-col items-center ">
+
+      <div className="flex items-center justify-center">
+        <button onClick={handleDisplayinput} className=" flex px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer mt-0 mb-4" >
+         Add a Hobby <AddIcon className="ml-2" size={25} /> 
+        </button>
+      </div>
+      
       
       <div className={displayinput ? " ease-in duration-300 w-full max-w-md mt-8 bg-white bg-opacity-80 rounded-md p-8":"absolute left-[100%] ease-in duration-500 z-10"}>
         <form onSubmit={sendHobbys}>
@@ -114,6 +118,8 @@ function Feed() {
         </form>
         
       </div>
+
+      
 
 
       {hobbys.map(

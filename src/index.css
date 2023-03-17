@@ -2,5 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.sidebar {
+  @apply p-6 flex-shrink-0 w-1/3;
+}
 
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebarRow:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.sidebarRow > h4 {
+  @apply ml-5 font-medium;
+}
+
+.sidebarRow > .MuiSvgIcon-root {
+  @apply text-2xl text-blue-500;
+}
+
+
+.container {
+  @apply w-full h-full;
+}
 

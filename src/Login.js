@@ -57,7 +57,7 @@ function Login() {
   };
 
   return (
-    <div className="grid grid-cols-1  bg-[#f0f2f5] md:grid-cols-2 gap-8 mx-auto py-20 px-6 md:px-32 items-center">
+    <div className="grid grid-cols-1  bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r from-blue-100 to-green-100 md:grid-cols-2 gap-8 mx-auto py-20 px-6 md:px-32 items-center">
       <form className="flex flex-col items-center w-full">
         <input
           className="w-[60%]  h-12 px-3 rounded mb-3"
@@ -67,21 +67,21 @@ function Login() {
           placeholder="Full name (required if registering)"
         />
         <input
-          className="w-[60%] h-12 px-3 rounded mb-3"
+          className="w-[60%] h-12 px-3 rounded mb-3 "
           type="text"
           value={profpic}
           onChange={(e) => setProfpic(e.target.value)}
           placeholder="Optional Profile Pic (Paste URL Here)"
         />
         <input
-          className="w-[60%]  h-12 px-3 rounded mb-3"
+          className="w-[60%]  h-12 px-3 rounded mb-3  "
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
         <input
-          className="w-[60%]  h-12 px-3 rounded mb-3"
+          className="w-[60%]  h-12 px-3 rounded mb-3  "
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -94,8 +94,8 @@ function Login() {
         >
           Sign In
         </button>
-        <p className="bg-gray-200 rounded p-2 text-center transition-all duration-200">
-          Not a member?
+        <p className="bg-white rounded p-2 text-center transition-all duration-200">
+          Not a member? Fill out the information above and Click:
           <span
             className="text-blue-500 pl-2 font-bold cursor-pointer"
             onClick={register}

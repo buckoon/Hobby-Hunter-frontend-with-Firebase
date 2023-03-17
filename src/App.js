@@ -6,9 +6,11 @@ import Login from "./Login";
 import { useDispatch } from "react-redux";
 import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
-import "./App.css";
+
 import Banner from "./Banner";
 import Hero from "./Hero";
+import Weather from "./Weather";
+import Toprated from "./Toprated";
 
 function App() {
   const user = useSelector(selectUser);
@@ -34,7 +36,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="app">
+    <div className=" flex flex-col items-center bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r from-blue-100 to-green-100">
       
       
 
@@ -45,9 +47,17 @@ function App() {
         </>
          
       ) : (
-        <div className="app_body">
+        <div className="space-y-4">
           <Banner />
-          <Feed />
+          <div className="flex w-90 mt-[35px] justify-center space-x-4 " >
+            
+            <Toprated/>
+            <Feed />
+            <Weather/>
+            
+
+          </div>
+          
         </div>
       )}
     </div>
