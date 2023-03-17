@@ -28,7 +28,7 @@ function Weather() {
   };
 
   return (
-    <div className="flex-[0.2] flex-col items-center">
+    <div className="flex-[0.2] h-fit flex-col items-center bg-opacity-40 bg-white  top-[80px] rounded-lg  text-green-600 text-center border-b border-gray-600">
       <h3 className=" font-bold my-6 text-green-600">
         Check the weather in case you find an outdoor hobby
       </h3>

@@ -4,7 +4,7 @@ import { Avatar } from "@mui/material";
 
 function Hobby({ name, profpic, description, instructions, photo }) {
   return (
-    <div className="flex p-5 mb-10 rounded-lg border border-gray-300 bg-white shadow-lg bg-opacity-50">
+    <div className="flex p-5 mb-5 rounded-lg border border-gray-300 bg-white shadow-lg bg-opacity-50">
       <div className="flex flex-col justify-between">
         <Avatar src={profpic} className="w-16 h-16" />
         <div className="post_info mt-4">

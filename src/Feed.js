@@ -56,68 +56,72 @@ function Feed() {
     <div className="min-h-screen  flex-[0.6] flex-col items-center ">
 
       <div className="flex items-center justify-center">
-        <button onClick={handleDisplayinput} className=" flex px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer mt-0 mb-4" >
+        <button onClick={handleDisplayinput} className=" flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer  " >
          Add a Hobby <AddIcon className="ml-2" size={25} /> 
         </button>
       </div>
       
-      
-      <div className={displayinput ? " ease-in duration-300 w-full max-w-md mt-8 bg-white bg-opacity-80 rounded-md p-8":"absolute left-[100%] ease-in duration-500 z-10"}>
-        <form onSubmit={sendHobbys}>
-          <div className="mb-6">
-            <label
-              htmlFor="hobby"
-              className="block text-green-600 font-bold mb-2"
-            >
+      <div className="flex items-center justify-center  ">
+        <div className={displayinput ? "  ease-in duration-300 w-full max-w-md bg-white bg-opacity-80 rounded-md p-8 Z-10 ":"absolute top-0 h-screen left-[-100%] ease-in duration-500 z-10"}>
+         <form className="" onSubmit={sendHobbys}>
+            <div className="">
+             <label
+                htmlFor="hobby"
+                className="block text-green-600 font-bold mb-2"
+             >
               List your favorite hobby :
-            </label>
-            <input
+             </label>
+              <input
               type="text"
               id="hobby"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="instructions"
-              className="block text-green-600 font-bold mb-2"
-            >
+              />
+           </div>
+           <div className="">
+              <label
+               htmlFor="instructions"
+               className="block text-green-600 font-bold mb-2"
+             >
               Instructions and supplies:
-            </label>
-            <input
-              type="text"
-              id="instructions"
-              value={input2}
-              onChange={(e) => setInput2(e.target.value)}
-              className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="photo"
-              className="block text-green-600 font-bold mb-2"
+              </label>
+             <input
+               type="text"
+               id="instructions"
+               value={input2}
+               onChange={(e) => setInput2(e.target.value)}
+               className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
+             />
+           </div>
+           <div className="">
+             <label
+               htmlFor="photo"
+               className="block text-green-600 font-bold mb-2"
+             >
+                Add a photo:
+             </label>
+             <input
+               type="text"
+               id="photo"
+               value={input3}
+               onChange={(e) => setInput3(e.target.value)}
+                className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
+             />
+            </div>
+           <button
+             type="submit"
+             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
-              Add a photo:
-            </label>
-            <input
-              type="text"
-              id="photo"
-              value={input3}
-              onChange={(e) => setInput3(e.target.value)}
-              className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
-            />
-          </div>
-          <button
-            type="submit"
-            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Submit
-          </button>
-        </form>
+             Submit
+            </button>
+         </form>
         
+        </div>
+        
+
       </div>
+      
 
       
 
