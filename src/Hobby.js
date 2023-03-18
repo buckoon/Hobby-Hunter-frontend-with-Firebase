@@ -11,7 +11,7 @@ function Hobby({ name, profpic, description, instructions, photo }) {
           <h2 className="text-lg font-semibold text-green-600">{name}</h2>
         </div>
         <h3 className="text-gray-700 text-base mt-2">{description}</h3>
-        <p className="text-sm text-gray-500 mt-2">{instructions}</p>
+        <p className="text-sm text-black mt-2">{instructions}</p>
         <div className="mt-4">
           <Starrating />
         </div>

@@ -47,9 +47,9 @@ function App() {
         </>
          
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 w-[90%]">
           <Banner />
-          <div className="flex w-90 justify-center space-x-4 " >
+          <div className="flex  justify-center space-x-4 " >
             
             <Toprated/>
             <Feed />

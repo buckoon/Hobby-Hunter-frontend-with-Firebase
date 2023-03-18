@@ -5,6 +5,7 @@ import { db } from "./firebase";
 import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
+import { motion } from 'framer-motion';
 
 import AddIcon from '@mui/icons-material/Add';
 
@@ -21,6 +22,10 @@ function Feed() {
     setDisplayinput(!displayinput);
   }
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
   useEffect(() => {
     db.collection("hobbys")
@@ -53,93 +58,86 @@ function Feed() {
   };
 
   return (
-    <div className="min-h-screen  flex-[0.6] flex-col items-center space-y-4">
-
+    <div className="min-h-screen flex-[0.6] flex-col items-center space-y-2">
       <div className="flex items-center justify-center">
-        <button onClick={handleDisplayinput} className=" flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer  " >
-         Add a Hobby <AddIcon className="ml-2" size={25} /> 
+        <button
+          onClick={handleDisplayinput}
+          className="flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer"
+        >
+          Add a Hobby <AddIcon className="ml-2" size={25} />
         </button>
       </div>
-      
-      <div className="flex items-center justify-center  ">
-        <div className={displayinput ? "  ease-in duration-300 w-full max-w-md bg-white bg-opacity-80 rounded-md p-8 Z-10 ":"absolute top-0 h-screen left-[-100%] ease-in duration-500 z-10"}>
-         <form className="" onSubmit={sendHobbys}>
-            <div className="">
-             <label
-                htmlFor="hobby"
-                className="block text-green-600 font-bold mb-2"
-             >
-              List your favorite hobby :
-             </label>
-              <input
-              type="text"
-              id="hobby"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
-              />
-           </div>
-           <div className="">
-              <label
-               htmlFor="instructions"
-               className="block text-green-600 font-bold mb-2"
-             >
-              Instructions and supplies:
+      <div className="flex p-5 mb-5 justify-center rounded-lg border border-gray-300 bg-white shadow-lg bg-opacity-50">
+        <div
+          className={
+            displayinput
+              ? "ease-in duration-300 w-full max-w-md bg-opacity-80 rounded-md p-8 z-10"
+              : <p></p>
+          }
+          style={{display:displayinput ? "block" : "none"}}
+        >
+          <form className="flex flex-col gap-4" onSubmit={sendHobbys}>
+            <div className="flex flex-col">
+              <label htmlFor="hobby" className="text-black font-bold mb-2">
+                List your favorite hobby:
               </label>
-             <input
-               type="text"
-               id="instructions"
-               value={input2}
-               onChange={(e) => setInput2(e.target.value)}
-               className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
-             />
-           </div>
-           <div className="">
-             <label
-               htmlFor="photo"
-               className="block text-green-600 font-bold mb-2"
-             >
-                Add a photo:
-             </label>
-             <input
-               type="text"
-               id="photo"
-               value={input3}
-               onChange={(e) => setInput3(e.target.value)}
-                className="border border-gray-400 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
-             />
+              <input
+                type="text"
+                id="hobby"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
+              />
             </div>
-           <button
-             type="submit"
-             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            <div className="flex flex-col">
+              <label htmlFor="instructions" className="text-black font-bold mb-2">
+                Instructions and supplies:
+               </label>
+             <textarea
+                id="instructions"
+                value={input2}
+               onChange={(e) => setInput2(e.target.value)}
+               rows={3}
+                onInput={(e) => {
+                  e.target.rows = Math.ceil(e.target.scrollHeight / 20);
+                }}
+               className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
+              />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="photo" className="text-black font-bold mb-2">
+                Add a photo:
+              </label>
+              <input
+                type="text"
+                id="photo"
+                value={input3}
+                onChange={(e) => setInput3(e.target.value)}
+                className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-green-500 text-white font-bold py-2 hover:shadow-xl px-4 rounded focus:outline-none focus:shadow-outline"
             >
-             Submit
+              Submit
             </button>
-         </form>
-        
+          </form>
         </div>
-        
-
       </div>
-      
-
-      
-
-
-      {hobbys.map(
-        ({ id, data: { name, profpic, description, instructions, photo } }) => (
-          <Hobby
-            key={id}
-            name={name}
-            profpic={profpic}
-            description={description}
-            instructions={instructions}
-            photo={photo}
-          />
-        )
-      )}
+      {hobbys.map(({ id, data: { name, profpic, description, instructions, photo } }) => (
+        <Hobby
+          key={id}
+          name={name}
+          profpic={profpic}
+          description={description}
+          instructions={instructions}
+          photo={photo}
+        />
+      ))}
     </div>
   );
+  
 }
 
 export default Feed;
