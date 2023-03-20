@@ -106,7 +106,7 @@ function Login() {
       </form>
       <div className="hidden md:block">
         <img
-          className="w-full h-auto rounded-lg  object-cover"
+          className="w-full h-auto rounded-lg  border-2 border-gray-400 object-cover"
           src={hpic}
           alt="login pic"
         />
