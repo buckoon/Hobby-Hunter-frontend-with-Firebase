@@ -12,7 +12,7 @@ function SidebarRow({ src, Icon, title }: SidebarRowProps) {
   return (
     <div className='sidebarRow flex items-center p-4 cursor-pointer hover:bg-gray-200 rounded-lg'>
       
-      {Icon && <Icon className='text-green-600 text-2xl' />}
+      {Icon && <Icon className='text-green-500 text-2xl' />}
       <h4 className='ml-5 font-medium'>{title}</h4>
       <FiChevronDown className='ml-auto text-gray-500 text-xl' />
     </div>

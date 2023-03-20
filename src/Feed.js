@@ -18,6 +18,8 @@ function Feed() {
   const [input2, setInput2] = useState("");
   const [input3, setInput3] = useState("");
   const [displayinput, setDisplayinput]= useState(false);
+  const [ratingValue, setRatingValue] = useState(0);
+
   const handleDisplayinput =()=>{
     setDisplayinput(!displayinput);
   }
@@ -49,11 +51,13 @@ function Feed() {
       description: input,
       instructions: input2,
       photo: input3,
+      starrating: ratingValue,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setInput("");
     setInput2("");
     setInput3("");
+    setRatingValue(0);
     setDisplayinput(!displayinput);
   };
 
@@ -62,7 +66,7 @@ function Feed() {
       <div className="flex items-center justify-center">
         <button
           onClick={handleDisplayinput}
-          className="flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-600 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer"
+          className="flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-500 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer"
         >
           Add a Hobby <AddIcon className="ml-2" size={25} />
         </button>
@@ -107,6 +111,7 @@ function Feed() {
                   id="photo"
                   value={input3}
                   onChange={(e) => setInput3(e.target.value)}
+                  placeholder="Enter photo URL"
                   className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
                 />
               </div>
@@ -120,7 +125,7 @@ function Feed() {
           </div>
         )}
       </div>
-      {hobbys.map(({ id, data: { name, profpic, description, instructions, photo } }) => (
+      {hobbys.map(({ id, data: { name, profpic, description, instructions, photo} }) => (
         <Hobby
           key={id}
           name={name}
@@ -128,6 +133,7 @@ function Feed() {
           description={description}
           instructions={instructions}
           photo={photo}
+          
         />
       ))}
     </div>

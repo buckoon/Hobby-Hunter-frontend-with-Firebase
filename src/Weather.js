@@ -38,12 +38,12 @@ function Weather() {
             value={location}
             onChange={handleInputChange}
             placeholder="Enter City"
-            className="border border-gray-400 rounded px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+            className="border border-gray-400 rounded px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           <div className="space-y-2">
             <button
               type="submit"
-              className="bg-green-600 hover:shadow-xl text-white font-bold py-2 px-6 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+              className="bg-green-500 hover:shadow-xl text-white font-bold py-2 px-6 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
             >
               Search
             </button>
@@ -62,7 +62,7 @@ function Weather() {
           
           <img className="top-0 left-0 w-full rounded-lg h-80 object-cover" src="https://images.unsplash.com/photo-1489343970971-452ba8e1548d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnJ5aW5nJTIwc3VyZmJvYXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="/" />
           
-          <div className="absolute  w-full  flex flex-col  text-white">
+          <div className="absolute  w-full flex flex-col  text-white">
             <h2 className="text-2xl font-bold">{weatherData.name}</h2>
             <p className="text-xl">Temperature: {weatherData.main.temp} &#8457;</p>
             <p className="text-xl">Feels like: {weatherData.main.feels_like} &#8457;</p>

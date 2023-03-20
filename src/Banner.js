@@ -21,7 +21,7 @@ function Banner() {
   <div className="flex justify-evenly sticky top-0 z-50 h-14 lg:h-20 max-w-screen-2xl bg-opacity-60 bg-white rounded-lg border-b border-gray-600">
     <div className="flex items-center h-full space-x-20  w-full lg:w-auto">
       
-      <h1 className="text-green-600 items-center text-xl lg:text-4xl font-medium">Hobby Hunter</h1>
+      <h1 className="text-green-500 items-center text-xl lg:text-4xl font-medium">Hobby Hunter</h1>
       <img src={logo} alt="Hobby Hunter logo" className="w-20 h-10 lg:w-52 lg:h-14 ml-2 rounded-lg hidden lg:block" />
       
 
@@ -35,7 +35,7 @@ function Banner() {
           </div>
           <div className="">
             <button
-              className="px-3 py-2 text-white bg-green-600 rounded-lg font-medium hover:bg-red-600 transition duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base"
+              className="px-3 py-2 text-white bg-green-500 rounded-lg font-medium hover:bg-red-600 transition duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base"
               onClick={logoutOfApp}
             >
               Logout
