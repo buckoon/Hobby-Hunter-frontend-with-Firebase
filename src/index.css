@@ -31,3 +31,12 @@
   @apply w-full h-full;
 }
 
+/* Change the scrollbar width and thumb color */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #34D399;
+  border-radius: 5px;
+}
