@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
-import hpic from "./images/cover.png";
+import hpic from "./images/screenshot.png";
 
 function Login() {
   const [name, setName] = useState("");
@@ -88,7 +88,7 @@ function Login() {
           placeholder="Password"
         />
         <button
-          className="w-[60%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-500 transition-all duration-200"
+          className="w-[60%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-500 transition-all duration-200 hover:shadow-xl"
           type="submit"
           onClick={loginToApp}
         >
@@ -97,7 +97,7 @@ function Login() {
         <p className="bg-white rounded p-2 text-center transition-all duration-200">
           Not a member? Fill out the information above and Click:
           <span
-            className="text-blue-500 pl-2 font-bold cursor-pointer"
+            className="text-blue-500 hover:text-blue-900 pl-2 font-bold cursor-pointer"
             onClick={register}
           >
             Register Now
@@ -106,7 +106,7 @@ function Login() {
       </form>
       <div className="hidden md:block">
         <img
-          className="w-full h-auto rounded-lg object-cover"
+          className="w-full h-auto rounded-lg  object-cover"
           src={hpic}
           alt="login pic"
         />
