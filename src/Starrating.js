@@ -4,7 +4,7 @@ import "./Starrating.css";
 
 function Starrating() {
    const MAX_RATING=5;
-   const  MIN_RATING=1;
+   const  MIN_RATING=3;
   const [rating, setRating] = useState(Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING);
   const [hover, setHover] = useState(null);
     
