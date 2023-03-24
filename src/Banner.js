@@ -31,7 +31,7 @@ function Banner() {
             <h2 className="text-green-600 text-base lg:text-3xl font-medium ml-2">
               Welcome {user.displayName}!
             </h2>
-            <Avatar src={user.photoUrl} className="ml-2 lg:ml-5 w-8 h-8 lg:w-10 lg:h-10" />
+            <Avatar src={user.photoUrl ? user.photoUrl : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfHEZmdtWhnx38y8OV5v7cLGlzwP8B33z2GA&usqp=CAU"}  className="ml-2 lg:ml-5 w-8 h-8 lg:w-10 lg:h-10" />
           </div>
           <div className="">
             <button
