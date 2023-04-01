@@ -9,6 +9,7 @@ import Banner from "./Banner";
 import Hero from "./Hero";
 import Weather from "./Weather";
 import Toprated from "./Toprated";
+import Activities from "./Activities";
 
 function App() {
   const user = useSelector(selectUser);
@@ -55,6 +56,7 @@ function App() {
             <Toprated />
             <Feed />
             <Weather />
+            <Activities />
           </div>
         </div>
       )}
