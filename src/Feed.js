@@ -14,9 +14,9 @@ import AddIcon from '@mui/icons-material/Add';
 function Feed() {
   const user = useSelector(selectUser);
   const [hobbys, setHobbys] = useState([]);
-  const [input, setInput] = useState("");
-  const [input2, setInput2] = useState("");
-  const [input3, setInput3] = useState("");
+  const [hobbyname, setHobbyname] = useState("");
+  const [hobbyinstructions, setHobbyinstructions] = useState("");
+  const [hobbyphoto, setHobbyphoto] = useState("");
   const [displayinput, setDisplayinput]= useState(false);
   const [ratingValue, setRatingValue] = useState(0);
 
@@ -48,15 +48,15 @@ function Feed() {
     db.collection("hobbys").add({
       name: user.displayName /*these to lines take in the stuff from userSlice. Line 17 enables this*/,
       profpic: user.photoUrl || "",
-      description: input,
-      instructions: input2,
-      photo: input3,
+      description: hobbyname,
+      instructions: hobbyinstructions,
+      photo: hobbyphoto,
       starrating: ratingValue,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
-    setInput("");
-    setInput2("");
-    setInput3("");
+    setHobbyname("");
+    setHobbyinstructions("");
+    setHobbyphoto("");
     setRatingValue(0);
     setDisplayinput(!displayinput);
   };
@@ -82,8 +82,8 @@ function Feed() {
                 <input
                   type="text"
                   id="hobby"
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
+                  value={hobbyname}
+                  onChange={(e) => setHobbyname(e.target.value)}
                   className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
                 />
               </div>
@@ -93,8 +93,8 @@ function Feed() {
                 </label>
                 <textarea
                   id="instructions"
-                  value={input2}
-                  onChange={(e) => setInput2(e.target.value)}
+                  value={hobbyinstructions}
+                  onChange={(e) => setHobbyinstructions(e.target.value)}
                   rows={3}
                   onInput={(e) => {
                     e.target.rows = Math.ceil(e.target.scrollHeight / 20);
@@ -109,8 +109,8 @@ function Feed() {
                 <input
                   type="text"
                   id="photo"
-                  value={input3}
-                  onChange={(e) => setInput3(e.target.value)}
+                  value={hobbyphoto}
+                  onChange={(e) => setHobbyphoto(e.target.value)}
                   placeholder="Enter photo URL"
                   className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
                 />
