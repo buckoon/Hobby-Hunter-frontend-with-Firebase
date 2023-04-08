@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar {
+  @apply p-6 flex-shrink-0 w-1/3;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebarRow:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.sidebarRow > h4 {
+  @apply ml-5 font-medium;
+}
+
+.sidebarRow > .MuiSvgIcon-root {
+  @apply text-2xl text-blue-500;
+}
+
+
+.container {
+  @apply w-full h-full;
+}
+
+/* Change the scrollbar width and thumb color */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #34D399;
+  border-radius: 5px;
 }

@@ -1,0 +1,19 @@
+body {
+  /*background-image: url("https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg");
+  background-size: cover;*/
+    
+ 
+    
+    
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #00b14a;;
+  }
+  
+  
+  
