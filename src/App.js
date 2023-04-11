@@ -53,10 +53,13 @@ function App() {
         <div className="space-y-4 w-[90%]">
           <Banner />
           <div className="flex  justify-center space-x-4 ">
-            <Toprated />
+            <div className="space-y-4">
+              <Activities />
+              <Toprated />
+            </div>
             <Feed />
             <Weather />
-            <Activities />
+            
           </div>
         </div>
       )}
