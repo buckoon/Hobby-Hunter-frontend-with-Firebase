@@ -62,11 +62,11 @@ function Feed() {
   };
 
   return (
-    <div className="min-h-screen flex-[0.6] flex-col items-center space-y-2">
+    <div className="min-h-screen  flex-col items-center space-y-2">
       <div className="flex items-center justify-center">
         <button
           onClick={handleDisplayinput}
-          className="flex flex-row px-16 py-3 border-b border-gray-600 justify-center bg-green-500 text-white rounded-lg hover:shadow-xl font-medium z-20 cursor-pointer"
+          className="flex flex-row px-16 py-3 border-b border-gray-600 justify-center  text-white rounded-lg hover:shadow-xl font-medium z-5 cursor-pointer"
         >
           Add a Hobby <AddIcon className="ml-2" size={25} />
         </button>

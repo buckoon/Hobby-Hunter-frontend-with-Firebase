@@ -52,13 +52,23 @@ function App() {
       ) : (
         <div className="space-y-4 w-[90%]">
           <Banner />
-          <div className="flex  justify-center space-x-4 ">
-            <div className="space-y-4">
-              <Activities />
-              <Toprated />
+          <div className="flex justify-center space-x-4 ">
+            <div className="space-y-4 sticky ">
+              <div>
+                <Activities />
+              </div>
+              <div>
+                <Toprated />
+              </div>
             </div>
-            <Feed />
+            <div className="flex-[0.6]">
+              <Feed/>
+            </div>
+            
+            <div className="flex-[0.2]">
             <Weather />
+            </div>
+            
             
           </div>
         </div>
