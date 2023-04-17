@@ -29,16 +29,16 @@ function Weather() {
 
   return (
     <div className="flex-[0.2] h-fit sticky flex-col items-center bg-opacity-40 bg-white top-[80px] rounded-lg text-black text-center border-b border-gray-600">
-      <h3 className="font-bold my-6 text-black mx-2">Check the weather in case you find an outdoor hobby</h3>
+      <h3 className=" my-6 text-black mx-2">Check the weather in case you find an outdoor hobby</h3>
       <div className="top-0">
         <form onSubmit={handleFormSubmit} className="flex flex-col items-center space-y-2">
-          <input
+          <input 
             id="location"
             type="text"
             value={location}
             onChange={handleInputChange}
             placeholder="Enter City"
-            className="border border-gray-400 rounded px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="border border-gray-400 rounded px-4 py-2 mx-2 focus:outline-none focus:ring-2 focus:ring-green-500"
           />
           <div className="space-y-2">
             <button
