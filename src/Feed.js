@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Feed.css";
+
 import Hobby from "./Hobby";
 import { db } from "./firebase";
 import firebase from "firebase/compat/app";
@@ -71,7 +71,7 @@ function Feed() {
           Add a Hobby <AddIcon className="ml-2" size={25} />
         </button>
       </div>
-      <div className={displayinput ? "text-black  flex p-5 mb-5 bg-opacity-40 justify-center rounded-lg border border-gray-300  bg-white shadow-lg  flex-col z-10 ease-in duration-500": "absolute top-0  left-[100%]  "}>
+      <div className={displayinput ? "text-black  flex p-5 mb-5 bg-opacity-40 justify-center rounded-lg border border-gray-300  shadow-lg  flex-col z-10 ease-in duration-500": "absolute top-0  left-[100%]  "}>
         {displayinput && (
           <div className="form-section">
             <form className="flex flex-col gap-4" onSubmit={sendHobbys}>

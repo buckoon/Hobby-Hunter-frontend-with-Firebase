@@ -43,33 +43,41 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className=" flex flex-col items-center bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r from-blue-100 to-green-100">
+    <div className="bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r bg-deep-blue #010026">
       {!user ? (
         <>
           <Hero />
           <Login />
         </>
       ) : (
-        <div className="space-y-4 w-[90%]">
-          <Banner />
-          <div className="flex justify-center space-x-4 ">
-            <div className="space-y-4 sticky ">
-              <div>
-                <Activities />
+        <div className="relative">
+          <div className="absolute top-0 left-0  w-full h-full z-0">
+            <img
+              className="w-full  h-full object-cover"
+              src="https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg"
+              alt="/"
+            />
+            <div className="bg-black/40 absolute top-0 left-0 w-full h-full"></div>
+          </div>
+          <div className="relative z-10 space-y-4">
+            <Banner />
+            <div className="flex justify-center space-x-4 ">
+              <div className="space-y-4 sticky ">
+                <div>
+                  <Activities />
+                </div>
+                <div>
+                  <Toprated />
+                </div>
               </div>
-              <div>
-                <Toprated />
+              <div className="flex-[0.6]">
+                <Feed/>
+              </div>
+              
+              <div className="flex-[0.2] ">
+              <Weather />
               </div>
             </div>
-            <div className="flex-[0.6]">
-              <Feed/>
-            </div>
-            
-            <div className="flex-[0.2]">
-            <Weather />
-            </div>
-            
-            
           </div>
         </div>
       )}

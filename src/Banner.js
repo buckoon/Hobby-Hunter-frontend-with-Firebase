@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./Banner.css";
+
 import { logout } from "./features/userSlice";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";

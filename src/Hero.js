@@ -41,7 +41,7 @@ function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                className="max-w-[600px] drop-shadow-2xl py-2 mt-2 rounded-lg text-lg text-white bg-black/60"
+                className="max-w-[600px] drop-shadow-2xl p-2 mt-2 rounded-lg text-lg text-white bg-black/60"
               >
                 Attention all adventurers, boredom busters, and thrill-seekers!
                 Are you ready to try something new and exciting? Look no
