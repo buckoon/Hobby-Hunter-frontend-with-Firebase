@@ -44,22 +44,38 @@ function Banner() {
         </ul>
       </div>
       <div className="hidden md:flex pr-4">
-        <button
-          className="px-3 py-2 text-white  rounded-lg font-medium hover:bg-red-600 transition mr-2 duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base"
-          onClick={logoutOfApp}
-        >
-          Logout
-        </button>
-
+          <div className="flex">
+            {user && (
+              <>
+                <h2 className="text-base lg:text-3xl font-medium ml-2">
+                  Welcome {user.displayName}!
+                </h2>
+                <Avatar
+                  src={
+                    user.photoUrl
+                      ? user.photoUrl
+                      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfHEZmdtWhnx38y8OV5v7cLGlzwP8B33z2GA&usqp=CAU"
+                  }
+                  className="ml-2 lg:ml-5 w-8 h-8 lg:w-10 lg:h-10"
+                />
+              </>
+            )}
+            <button
+              className="px-3 py-2 text-white  rounded-lg font-medium hover:bg-red-600 transition mr-2 duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base"
+              onClick={logoutOfApp}
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+        <div className="md:hidden" onClick={handleClick}>
+          {!nav ? (
+            <MenuIcon className="w-5 cursor-pointer" />
+          ) : (
+            <CloseIcon />
+          )}
+        </div>
       </div>
-      <div className="md:hidden" onClick={handleClick}>
-        
-        {!nav ? (<MenuIcon className="w-5 cursor-pointer"/> ):(<CloseIcon/>)}
-       
-      </div>
-   
-
-    </div>
 
    
 

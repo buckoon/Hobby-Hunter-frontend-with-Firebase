@@ -10,10 +10,13 @@ import Hero from "./Hero";
 import Weather from "./Weather";
 import Toprated from "./Toprated";
 import Activities from "./Activities";
+import useMediaQuery from "./hooks/useMediaQuery";
+
 
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   useEffect(() => {
     const userFromStorage = localStorage.getItem("user");
@@ -43,7 +46,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r bg-deep-blue #010026">
+    <div className=" bg-cover bg-center bg-fixed bg-opacity-80 bg-gradient-to-r bg-deep-blue #010026">
       {!user ? (
         <>
           <Hero />
@@ -51,31 +54,36 @@ function App() {
         </>
       ) : (
         <div className="relative">
-          <div className="absolute top-0 left-0  w-full h-full z-0">
+          <div className="absolute top-0 left-0 w-full h-full z-0">
             <img
-              className="w-full  h-full object-cover"
+              className="w-full h-full object-cover"
               src="https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg"
               alt="/"
             />
             <div className="bg-black/40 absolute top-0 left-0 w-full h-full"></div>
           </div>
-          <div className="relative z-10 space-y-4">
+          <div className="relative w-full z-10 space-y-4">
             <Banner />
             <div className="flex justify-center space-x-4 ">
-              <div className="space-y-4 sticky ">
-                <div>
-                  <Activities />
+              {!isSmallScreen && (
+                <div className="space-y-4 px-2 sticky ">
+                  <div>
+                    <Activities />
+                  </div>
+                  <div>
+                    <Toprated />
+                  </div>
                 </div>
-                <div>
-                  <Toprated />
+              )}
+              <div className="flex justify-center space-x-4 flex-col sm:flex-row">
+                <div className="sm:flex-[0.6]">
+                  <Feed />
                 </div>
-              </div>
-              <div className="flex-[0.6]">
-                <Feed/>
-              </div>
-              
-              <div className="flex-[0.2] ">
-              <Weather />
+                {!isSmallScreen && (
+                  <div className="sm:flex-[0.2] order-first sm:order-last">
+                    <Weather />
+                  </div>
+                )}
               </div>
             </div>
           </div>
