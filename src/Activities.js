@@ -13,7 +13,7 @@ function Activities() {
 
   const handleButtonClick = async () => {
     try {
-      const response = await fetch("http://www.boredapi.com/api/activity/");
+      const response = await fetch("https://www.boredapi.com/api/activity/");
       const data = await response.json();
       setActivity(data.activity);
       localStorage.setItem("activity", data.activity);
