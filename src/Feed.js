@@ -71,7 +71,7 @@ function Feed() {
           Add a Hobby <AddIcon className="ml-2" size={25} />
         </button>
       </div>
-      <div className={displayinput ? "text-black  flex p-5 mb-5 bg-opacity-40 justify-center rounded-lg border border-gray-300  shadow-lg  flex-col z-10 ease-in duration-500": "absolute top-0  left-[100%]  "}>
+      <div className={displayinput ? "text-black  flex p-5 mb-5 bg-zinc-200 justify-center rounded-lg border shadow-lg  flex-col z-10 ease-in duration-500": "absolute top-0  left-[100%]  "}>
         {displayinput && (
           <div className="form-section">
             <form className="flex flex-col gap-4" onSubmit={sendHobbys}>
@@ -117,7 +117,7 @@ function Feed() {
               </div>
               <button
                 type="submit"
-                className="bg-green-500 text-white font-bold py-2 hover:shadow-xl px-4 rounded focus:outline-none focus:shadow-outline"
+                className=" bg-indigo-600  text-white font-bold py-2 hover:shadow-xl px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Submit
               </button>

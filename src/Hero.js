@@ -29,7 +29,7 @@ function Hero() {
           </h1>
           <div className="flex mt-4">
             <button
-              className="flex items-center justify-center text-3xl bg-white text-black w-32 h-10 hover:bg-green-600 transition duration-150 ease-in-out border py-2 px-3 rounded-full "
+              className="flex items-center justify-center text-3xl bg-white text-black w-32 h-10 hover:bg-indigo-300 transition duration-150 ease-in-out border py-2 px-3 rounded-full "
               onClick={handleChange}
             >
               About{' '}

@@ -3,24 +3,13 @@ import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
 import hpic from "./images/screenshot.png";
-import { ref, uploadBytes } from "firebase/storage";
-import { v4 } from "uuid";
-import { storage } from "./firebase";
 
 function Login() {
   const [name, setName] = useState("");
-  const [profpic, setProfpic] = useState(null);
+  const [profpic, setProfpic] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-
-  const uploadImage = () => {
-    if (profpic == null) return;
-    const imageRef = ref(storage, `images/${profpic.name + v4()}`);
-    uploadBytes(imageRef, profpic).then(()=>{
-      alert("Image Uploaded");
-    })
-  };
 
   const loginToApp = (e) => {
     e.preventDefault();
@@ -79,15 +68,11 @@ function Login() {
         />
         <input
           className="w-[60%] h-12 px-3 rounded mb-3 "
-          type="file"
+          type="text"
           value={profpic}
-          onChange={(event) => setProfpic(event.target.files[0])}
+          onChange={(e) => setProfpic(e.target.value)}
           placeholder="Optional Profile Pic (Paste URL Here)"
         />
-         <button onClick={uploadImage}> Upload Image</button>
-           {/*{imageUrls.map((url) => {
-          return <img src={url} />;
-           })}*/}
         <input
           className="w-[60%]  h-12 px-3 rounded mb-3  "
           type="email"
@@ -103,7 +88,7 @@ function Login() {
           placeholder="Password"
         />
         <button
-          className="w-[60%]  h-12 bg-green-500 rounded text-white font-bold mb-3 hover:bg-green-500 transition-all duration-200 hover:shadow-xl"
+          className="w-[60%]  h-12 bg-indigo-600 rounded text-white font-bold mb-3 hover:bg-indigo-300 transition-all duration-200 hover:shadow-xl"
           type="submit"
           onClick={loginToApp}
         >
