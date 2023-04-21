@@ -60,13 +60,16 @@ function App() {
               src="https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg"
               alt="/"
             />
-            <div className="bg-black/40 absolute top-0 left-0 w-full h-full"></div>
+            <div className="bg-black/40 absolute top-0 left-0 w-full h-full">
+
+            </div>
           </div>
+
           <div className="relative w-full z-10 space-y-4">
             <Banner />
-            <div className="flex justify-center space-x-4 ">
+            <div className="flex  ">
               {!isSmallScreen && (
-                <div className="space-y-4 px-2 sticky ">
+                <div className=" space-y-4 pl-2 sticky ">
                   <div>
                     <Activities />
                   </div>
@@ -75,12 +78,12 @@ function App() {
                   </div>
                 </div>
               )}
-              <div className="flex justify-center space-x-4 flex-col sm:flex-row">
-                <div className="sm:flex-[0.6]">
+              <div className="flex sm:flex-row">
+                <div className="sm:flex-[0.7] mx-auto ">
                   <Feed />
                 </div>
                 {!isSmallScreen && (
-                  <div className="sm:flex-[0.2] order-first sm:order-last">
+                  <div className="sm:flex-[0.2] mr-2  sm:order-last">
                     <Weather />
                   </div>
                 )}

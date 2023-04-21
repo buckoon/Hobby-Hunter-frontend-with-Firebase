@@ -28,7 +28,7 @@ function Weather() {
   };
 
   return (
-    <div className=" h-fit Z-10 flex-col items-center   bg-zinc-200 drop-shadow-lg top-[80px] rounded-lg text-black text-center border-b border-gray-600">
+    <div className=" h-fit Z-10 flex-col items-center   bg-zinc-200 drop-shadow-lg top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px]">
       <h3 className="  text-black mx-2">Check the weather in case you find an outdoor hobby</h3>
       <div className="top-0">
         <form onSubmit={handleFormSubmit} className="flex flex-col items-center space-y-2">
