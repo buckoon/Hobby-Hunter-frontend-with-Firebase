@@ -36,15 +36,20 @@ function Banner() {
       <div className="px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
           <h1 className="text-3xl font-bold mr-4 sm:text-4xl">Hobby Hunter</h1>
-          <div className="hidden md:flex">
-            <NavLink to="/" className="p-4">
-              Home
-            </NavLink>
-            <NavLink to="/About" className="p-4">
-              About
-            </NavLink>
+          <ul className="hidden md:flex">
+            <li>
+              <NavLink to="/" >
+                Home
+              </NavLink>
+            </li>
+            <li>
+             <NavLink to="/About" >
+               About
+             </NavLink>
+            </li>
+       
             
-          </div>
+          </ul>
         </div>
         <div className=" items-center hidden sm:flex">
           <Search />
@@ -84,21 +89,22 @@ function Banner() {
         
       </div>
       <div className="sm:hidden">
-        <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
-          <li className="border-b-2 border-zinc-300 w-full">Home</li>
-          <li className="border-b-2 border-zinc-300 w-full">About</li>
-          <li className="border-b-2 border-zinc-300 w-full">Search </li>
-          <li className="border-b-2 border-zinc-300 w-full">Random</li>
-          <li className="border-b-2 border-zinc-300 w-full">Weather</li>
-          
-          <button
+       <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
+          <li className="border-b-2 border-zinc-300 w-full">
+           <NavLink to="/">Home</NavLink>
+          </li>
+          <li className="border-b-2 border-zinc-300 w-full">
+            <NavLink to="/About">About</NavLink>
+          </li>
+         <button
             className="px-3 py-2 text-white rounded-lg font-medium hover:bg-red-600 transition mr-2 duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base mb-4 mt-4"
-            onClick={logoutOfApp}
+           onClick={logoutOfApp}
           >
             Logout
           </button>
         </ul>
-      </div>
+</div>
+
       
     </div>
   );
