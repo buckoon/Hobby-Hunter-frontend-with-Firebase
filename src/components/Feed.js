@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import Hobby from "./Hobby";
-import { db } from "./firebase";
+import { db } from "../firebase";
 import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+import { selectUser } from "../features/userSlice";
 import { motion } from 'framer-motion';
 
 import AddIcon from '@mui/icons-material/Add';

@@ -11,7 +11,20 @@
 .sidebar {
   @apply p-6 flex-shrink-0 w-1/3;
 }
+.activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.activity-item {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
 .sidebarRow {
   display: flex;
   align-items: center;
