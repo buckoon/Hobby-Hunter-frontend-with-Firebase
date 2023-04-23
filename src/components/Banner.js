@@ -47,11 +47,12 @@ function Banner() {
                About
              </NavLink>
             </li>
+           
        
             
           </ul>
         </div>
-        <div className=" items-center hidden sm:flex">
+        <div className=" items-center hidden md:flex">
           <Search />
           <div className="flex">
             {user && (
@@ -79,7 +80,7 @@ function Banner() {
           
          
         </div>
-        <div className="sm:hidden" onClick={handleClick}>
+        <div className="md:hidden" onClick={handleClick}>
             {!nav ? (
               <MenuIcon className="w-5 cursor-pointer" />
             ) : (
@@ -88,13 +89,16 @@ function Banner() {
         </div>
         
       </div>
-      <div className="sm:hidden">
+      <div className="md:hidden">
        <ul className={!nav ? "hidden" : "absolute bg-zinc-200 w-full px-8"}>
           <li className="border-b-2 border-zinc-300 w-full">
            <NavLink to="/">Home</NavLink>
           </li>
           <li className="border-b-2 border-zinc-300 w-full">
             <NavLink to="/About">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Searched/" > Search</NavLink>
           </li>
          <button
             className="px-3 py-2 text-white rounded-lg font-medium hover:bg-red-600 transition mr-2 duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base mb-4 mt-4"

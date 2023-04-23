@@ -6,10 +6,12 @@ import {useNavigate} from 'react-router-dom';
 
 
 
+
 function Search() {
 
     const [input, setInput] = useState("");
     const navigate =useNavigate();
+    
 
     const submitHandler =(e) => {
         e.preventDefault();
@@ -28,7 +30,7 @@ function Search() {
             <SearchIcon className="h-5 w-5 text-gray-400" />
             <input
                 className="flex w-full ml-2 items-center bg-transparent outline-none"
-             placeholder="Find Hobbies by Category..."
+             placeholder="Find Hobbies by Type..."
              onChange={(e)=>setInput(e.target.value)}
              type="text"
              value={input}

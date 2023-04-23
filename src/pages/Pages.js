@@ -13,6 +13,7 @@ function Pages() {
        <Route path="/" element={<Home/>} />
        <Route path="/Searched/:search" element={<Searched/>} />
        <Route path="/About/" element={<About/>} />
+       <Route path="/Searched/" element={<Searched/>} />
        
      </Routes>
   
