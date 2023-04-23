@@ -9,14 +9,14 @@ function About() {
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full min-h-screen">
       <Banner/>
       <img
         className="top-0 left-0 w-full h-screen object-cover z-[-1]"
         src="https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg"
         alt="/"
       />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3">
         <motion.p
           initial="hidden"
           animate="visible"
