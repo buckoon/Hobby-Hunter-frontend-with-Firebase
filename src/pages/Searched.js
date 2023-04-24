@@ -40,7 +40,7 @@ function Searched() {
         </div>
   
         {!searchSuccessful && (
-          <div className="text-red-500">
+          <div className="text-red-500 ml-4">
             Sorry, that type of activity is not in our database. Perhaps you could try some of these instead:
             <ul>
               <li>recreational</li>
