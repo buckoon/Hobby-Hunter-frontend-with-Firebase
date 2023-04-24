@@ -97,8 +97,11 @@ function Banner() {
           <li className="border-b-2 border-zinc-300 w-full">
             <NavLink to="/About">About</NavLink>
           </li>
-          <li>
+          <li className="border-b-2 border-zinc-300 w-full">
             <NavLink to="/Searched/" > Search</NavLink>
+          </li>
+          <li className="border-b-2 border-zinc-300 w-full">
+            <NavLink to="/WeatherPage/" > Weather</NavLink>
           </li>
          <button
             className="px-3 py-2 text-white rounded-lg font-medium hover:bg-red-600 transition mr-2 duration-150 ease-in-out ml-2 lg:ml-5 text-sm lg:text-base mb-4 mt-4"
