@@ -29,9 +29,9 @@ function WeatherPage() {
   };
 
   return (
-    <div className="relative w-full z-10 space-y-4">
+    <div className="relative w-full z-10 ">
      <Banner/>
-        <div className="h-fit z-10 flex-col absolute bg-zinc-200 drop-shadow-lg top-[80px] rounded-lg text-black border-b border-gray-600 w-[250px]"
+        <div className="h-fit mt-10 z-5 flex-col absolute bg-zinc-200 drop-shadow-lg top-[80px] rounded-lg text-black border-b border-gray-600 w-[250px]"
             style={{ left: '50%', transform: 'translateX(-50%)' }}>
 
          <h3 className=" text-black mx-2">Check the weather in case you find an outdoor hobby</h3>
@@ -77,6 +77,11 @@ function WeatherPage() {
                 </div>
             )}
         </div>
+        <img
+         className="top-0 left-0 w-full h-screen object-cover z-[-1] 100vh"
+         src="https://cdn.osxdaily.com/wp-content/uploads/2017/06/macos-high-sierra-default-wallpaper-fall-mountain-scene-1.jpg"
+         alt="/"
+        />
     </div>
 
   );
