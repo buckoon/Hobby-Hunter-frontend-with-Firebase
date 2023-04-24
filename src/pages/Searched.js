@@ -3,10 +3,17 @@ import { useParams } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Search from '../components/Search';
 
+
+
+
 function Searched() {
+    
   const [searchedActivities, setSearchedActivities] = useState([]);
   const [searchSuccessful, setSearchSuccessful] = useState(true);
   let params = useParams();
+  
+  
+
 
   const getSearched = async (type) => {
     const activities = [];
@@ -69,8 +76,8 @@ function Searched() {
         )}
         {searchSuccessful && searchedActivities.length > 0 && (
           <>
-            <h1 className="ml-2 font-bold">Activities based on query:</h1>
-            <div className="activity-list">
+            <h1 className="ml-2 mt-4 font-bold">Activities based on query:</h1>
+            <div className="activity-list m-4">
               {searchedActivities.map((activity, index) => (
                 <div key={index} className="activity-item">{activity.activity}</div>
               ))}

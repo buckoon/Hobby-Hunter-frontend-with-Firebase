@@ -37,6 +37,8 @@
   border-radius: 10px;
 }
 
+
+
 .sidebarRow > h4 {
   @apply ml-5 font-medium;
 }
@@ -62,6 +64,9 @@
   background-color: rgb(79, 70, 229); /* RGB value for indigo-600 */
   border-radius: 5px;
 }
+
+
+
 
 @layer base {
   li {
