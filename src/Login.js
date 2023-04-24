@@ -11,6 +11,13 @@ function Login() {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
 
+  const handleEmailFocus = () => {
+    alert(
+      "If you do not wish to register with your email, you can sign in with the email: lisa@gmail.com and password: abcabc"
+    );
+  };
+
+
   const loginToApp = (e) => {
     e.preventDefault();
 
@@ -65,6 +72,9 @@ function Login() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Full name (required if registering)"
+          onClick={() =>
+            handleEmailFocus()
+          }
         />
         <input
           className="w-[60%] h-12 px-3 rounded mb-3 "
