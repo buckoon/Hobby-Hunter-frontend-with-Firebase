@@ -55,7 +55,7 @@ function Searched() {
            <div className=" mx-4 bg-gray-200 rounded-lg">
                 <div className="p-4 text-red-500 "> 
 
-                    <h2 className="font-bold">Sorry, that type of activity is not in our database. Perhaps you could try some of these instead:</h2>
+                    <h2 className="font-bold">Sorry, that type of hobby is not in our database. Perhaps you could try some of these instead:</h2>
                     <ul>
                      <li>recreational</li>
                      <li>education</li>
@@ -76,7 +76,7 @@ function Searched() {
         )}
         {searchSuccessful && searchedActivities.length > 0 && (
           <>
-            <h1 className="ml-2 mt-4 font-bold">Activities based on query:</h1>
+            <h1 className="ml-2 mt-4 font-bold">Here is a list of hobbies based on your search:</h1>
             <div className="activity-list m-4">
               {searchedActivities.map((activity, index) => (
                 <div key={index} className="activity-item">{activity.activity}</div>
