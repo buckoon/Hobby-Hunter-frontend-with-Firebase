@@ -23,8 +23,8 @@ function Activities() {
   };
 
   return (
-    <div className="flex h-[170px] sticky flex-col shadow-xl items-center bg-zinc-200 top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px] ">
-      <div className="flex flex-col py-2 px-6 h-[150px] w-[200px] overflow-hidden">
+    <div className="flex h-[200px] sticky flex-col shadow-xl items-center bg-zinc-200 top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px] ">
+      <div className="flex flex-col pt-4 pb-2 px-6 h-[190px] w-[200px] overflow-hidden">
         <button
           className=" text-white border bg-indigo-600 border-indigo-600
           hover:bg-indigo-300 transition-all duration-200 hover:shadow-xl rounded-md    font-bold py-2 px-6 mb-2  focus:outline-none focus:ring-2 "
@@ -32,7 +32,7 @@ function Activities() {
         >
           Get Random Hobby
         </button>
-        <span className="text-sm text-black lg:text-base xl:text-lg ">{activity}</span>
+        <span className="text-sm text-black lg:text-base text-m ">{activity}</span>
       </div>
     </div>
   );
