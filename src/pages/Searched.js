@@ -85,7 +85,7 @@ function Searched() {
           </>
         )}
         {searchSuccessful && searchedActivities.length === 0 && (
-          <div>L</div>
+          <div></div>
         )}
       </div>
     </div>
