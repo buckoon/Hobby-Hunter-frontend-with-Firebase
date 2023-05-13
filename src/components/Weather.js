@@ -29,7 +29,7 @@ function Weather() {
 
   return (
     <div className=" h-fit Z-10 flex-col items-center   bg-zinc-200 drop-shadow-lg top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px]">
-      <h3 className="  text-black mx-2">Check the weather in case you find an outdoor hobby</h3>
+      <h3 className=" pt-4 pb-2 text-black px-3 font-bold ">Check the weather in case you find an outdoor hobby:</h3>
       <div className="top-0">
         <form onSubmit={handleFormSubmit} className="flex flex-col items-center space-y-2">
           <input 
@@ -62,13 +62,13 @@ function Weather() {
           
           <img className="top-0 left-0 w-full rounded-lg h-80 object-cover" src="https://images.unsplash.com/photo-1489343970971-452ba8e1548d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnJ5aW5nJTIwc3VyZmJvYXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="/" />
           
-          <div className="absolute  w-full flex flex-col  text-white">
+          <div className="absolute pt-3 w-full flex flex-col  text-white">
             <h2 className="text-2xl font-bold">{weatherData.name}</h2>
-            <p className="text-xl">Temperature: {weatherData.main.temp} &#8457;</p>
-            <p className="text-xl">Feels like: {weatherData.main.feels_like} &#8457;</p>
-            <p className="text-xl">Humidity: {weatherData.main.humidity}%</p>
-            <p className="text-xl">Wind speed: {weatherData.wind.speed} mph</p>
-            <p className="text-xl">Weather: {weatherData.weather[0].main}</p>
+            <p className="text-l">Temperature: {weatherData.main.temp} &#8457;</p>
+            <p className="text-l">Feels like: {weatherData.main.feels_like} &#8457;</p>
+            <p className="text-l">Humidity: {weatherData.main.humidity}%</p>
+            <p className="text-l">Wind speed: {weatherData.wind.speed} mph</p>
+            <p className="text-l">Weather: {weatherData.weather[0].main}</p>
           </div>
         </div>
       )}
