@@ -98,7 +98,7 @@ function Login() {
           placeholder="Password"
         />
         <button
-          className="w-[60%]  h-12 bg-indigo-600 rounded text-white font-bold mb-3 hover:bg-indigo-300 transition-all duration-200 hover:shadow-xl"
+          className="w-[60%]  h-12 bg-indigo-600 border-indigo-600 rounded text-white font-bold mb-3 hover:bg-indigo-300 transition-all duration-200 hover:shadow-xl"
           type="submit"
           onClick={loginToApp}
         >

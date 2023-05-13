@@ -28,7 +28,7 @@ function Weather() {
   };
 
   return (
-    <div className=" h-fit Z-10 flex-col items-center   bg-zinc-200 drop-shadow-lg top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px]">
+    <div className=" h-fit Z-10 flex-col items-center   bg-zinc-200 shadow-xl top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px]">
       <h3 className="  text-black mx-2">Check the weather in case you find an outdoor hobby</h3>
       <div className="top-0">
         <form onSubmit={handleFormSubmit} className="flex flex-col items-center space-y-2">
@@ -43,7 +43,8 @@ function Weather() {
           <div className="space-y-2">
             <button
               type="submit"
-              className=" bg-indigo-600 hover:shadow-xl text-white font-bold py-2 px-6 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+              className=" text-white border bg-indigo-600 border-indigo-600
+              hover:bg-indigo-300 transition-all duration-200 hover:shadow-xl rounded-md font-bold py-2 px-6 mb-2 "
             >
               Search
             </button>
