@@ -26,7 +26,7 @@ function Activities() {
     <div className="flex h-[170px] sticky flex-col items-center bg-zinc-200 top-[80px] rounded-lg text-black text-center border-b border-gray-600 w-[250px] ">
       <div className="flex flex-col py-2 px-6 h-[150px] w-[200px] overflow-hidden">
         <button
-          className=" hover:shadow-xl text-white font-bold py-2 px-6 mb-2 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+          className=" hover:shadow-xl text-white font-bold py-2 px-6 mb-2 rounded focus:outline-none focus:ring-2 "
           onClick={handleButtonClick}
         >
           Get Random Hobby

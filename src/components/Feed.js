@@ -6,6 +6,7 @@ import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { motion } from 'framer-motion';
+import useMediaQuery from "../hooks/useMediaQuery";
 
 import AddIcon from '@mui/icons-material/Add';
 
@@ -19,6 +20,7 @@ function Feed() {
   const [hobbyphoto, setHobbyphoto] = useState("");
   const [displayinput, setDisplayinput]= useState(false);
   const [ratingValue, setRatingValue] = useState(0);
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   const handleDisplayinput =()=>{
     setDisplayinput(!displayinput);
@@ -96,9 +98,7 @@ function Feed() {
                   value={hobbyinstructions}
                   onChange={(e) => setHobbyinstructions(e.target.value)}
                   rows={3}
-                  onInput={(e) => {
-                    e.target.rows = Math.ceil(e.target.scrollHeight / 20);
-                  }}
+                  
                   className="border border-gray-400 rounded py-2 px-3 leading-tight focus:outline-none focus:border-green-500"
                 />
               </div>
@@ -125,17 +125,25 @@ function Feed() {
           </div>
         )}
       </div>
-      {hobbys.map(({ id, data: { name, profpic, description, instructions, photo} }) => (
-        <Hobby
-          key={id}
-          name={name}
-          profpic={profpic}
-          description={description}
-          instructions={instructions}
-          photo={photo}
+      <div className={isSmallScreen ? "px-2" : ""}>
+        {hobbys.map(({ id, data: { name, profpic, description, instructions, photo} }) => (
+          <Hobby 
+
+            key={id}
+            name={name}
+            profpic={profpic}
+            description={description}
+            instructions={instructions}
+            photo={photo}
+            
           
-        />
-      ))}
+          />
+        ))}
+
+
+      </div>
+
+  
     </div>
   );
   
