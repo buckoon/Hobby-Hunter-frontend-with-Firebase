@@ -52,7 +52,7 @@ function Searched() {
           <Search/>
         </div>
         {!searchSuccessful && (
-           <div className=" mx-4 bg-gray-200 rounded-lg">
+           <div className=" my-2 mx-4 bg-gray-200 rounded-lg">
                 <div className="p-4 text-red-500 "> 
 
                     <h2 className="font-bold">Sorry, that type of hobby is not in our database. Perhaps you could try some of these instead:</h2>
@@ -85,7 +85,7 @@ function Searched() {
           </>
         )}
         {searchSuccessful && searchedActivities.length === 0 && (
-          <div>No activities found for this query</div>
+          <div>L</div>
         )}
       </div>
     </div>
