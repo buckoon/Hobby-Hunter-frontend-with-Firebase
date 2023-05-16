@@ -5,7 +5,7 @@ import { db } from "../firebase";
 import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-import { motion } from 'framer-motion';
+
 import useMediaQuery from "../hooks/useMediaQuery";
 
 import AddIcon from '@mui/icons-material/Add';
@@ -26,15 +26,12 @@ function Feed() {
     setDisplayinput(!displayinput);
   }
 
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+ 
 
   useEffect(() => {
     db.collection("hobbys")
       .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot /*this orders the hobbys*/) =>
+      .onSnapshot((snapshot ) =>
         setHobbys(
           snapshot.docs.map((doc) => ({
             id: doc.id,
@@ -45,10 +42,10 @@ function Feed() {
   }, []);
 
   const sendHobbys = (e) => {
-    /*event*/
-    e.preventDefault(); /*this makes it so when you click enter after typing something it does not automatically reset*/
+   
+    e.preventDefault(); 
     db.collection("hobbys").add({
-      name: user.displayName /*these to lines take in the stuff from userSlice. Line 17 enables this*/,
+      name: user.displayName ,
       profpic: user.photoUrl || "",
       description: hobbyname,
       instructions: hobbyinstructions,

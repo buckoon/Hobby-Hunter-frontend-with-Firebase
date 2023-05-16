@@ -4,7 +4,7 @@ import { Avatar } from "@mui/material";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 function Hobby({ name, profpic, description, instructions, photo }) {
-  const isXsScreen = useMediaQuery("(max-width: 480px)"); // use the useMediaQuery hook to detect the screen size
+  const isXsScreen = useMediaQuery("(max-width: 480px)"); 
   const isSmScreen = useMediaQuery("(min-width: 481px) and (max-width: 768px)");
 
   return (

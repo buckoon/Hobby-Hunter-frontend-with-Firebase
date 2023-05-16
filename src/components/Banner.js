@@ -3,7 +3,7 @@ import { logout } from "../features/userSlice";
 import { auth } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-import useMediaQuery from "../hooks/useMediaQuery";
+
 import { Avatar } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -25,7 +25,7 @@ function Banner() {
 
   
   
-  const isSmallerScreen = useMediaQuery("(max-width: 768px)");
+  
   const logoutOfApp = () => {
     dispatch(logout());
     auth.signOut();
@@ -110,7 +110,7 @@ function Banner() {
             Logout
           </button>
         </ul>
-</div>
+      </div>
 
       
     </div>
